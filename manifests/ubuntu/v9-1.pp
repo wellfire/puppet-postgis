@@ -6,7 +6,7 @@ Requires:
  - Class["apt::preferences"]
 
 */
-class postgis::ubuntu::v8-4 inherits postgis::ubuntu::base {
+class postgis::ubuntu::v9-1 inherits postgis::ubuntu::base {
 
   case $lsbdistcodename {
     "oneiric" : {
