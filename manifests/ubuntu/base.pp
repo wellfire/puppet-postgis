@@ -2,7 +2,7 @@
 
 ==Class: postgis::ubuntu::base
 
-This class is dedicated to the common parts 
+This class is dedicated to the common parts
 shared by the different flavors of Debian
 
 Requires:
@@ -23,12 +23,12 @@ class postgis::ubuntu::base inherits postgis::base {
     command => "/usr/local/bin/make-postgresql-postgis-template.sh",
     unless => "psql -l |grep template_postgis",
     user => postgres,
-    require => [ 
+    require => [
       Package["postgresql-postgis"],
       Service["postgresql"],
       File["/usr/local/bin/make-postgresql-postgis-template.sh"]
     ]
   }
-  
+
 }
 
